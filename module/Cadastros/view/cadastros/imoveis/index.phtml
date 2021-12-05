@@ -11,13 +11,14 @@
 <table>
 <thead>
 <tr>
+<th>Registro</th>
 <th>Tipo</th>
 <th>Metragem</th>
 <th>Valor</th>
 </tr>
 </thead>
 <tbody>
-
+    <?=$this->partialLoop('imoveis.phtml',$this->imoveis)?>
 </tbody>
 </table>
 <a href="<?=$this->url('cadastros')?>">Voltar</a>

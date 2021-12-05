@@ -1,0 +1,21 @@
+<?php
+use Laminas\View\View;
+
+/**
+ * @var $this View
+ */
+$num = $this->valor;
+ $formatarValor = number_format($num, 2, ',', '.');
+
+?>
+<tr>
+<td><?=$this->registro?></td>
+<td><?=$this->tipo?></td>
+<td><?=$this->tamanho?> m²</td>
+<td>R$ <?=$formatarValor?></td>
+<td><a href="<?= $this->url('cadastros',[
+    'controller' => 'imoveis',
+    'action' => 'apagar',
+    'registro' => $this->registro])
+    ?>">X</a></td>
+</tr>

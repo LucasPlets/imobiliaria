@@ -54,7 +54,8 @@ return [
     ],
     'service_manager' => [
         'factories' => [
-            'CorretorTable' => Model\CorretorTableFactory::class
+            'CorretorTable' => Model\CorretorTableFactory::class,
+            'ImoveisTable' => Model\ImoveisTableFactory::class
             
 
         ]

@@ -7,7 +7,7 @@ use Interop\Container\ContainerInterface;
 class ImoveisControllerFactory implements FactoryInterface
 {
     public function __invoke(ContainerInterface $container, $requestedName, ?array $options = null){
-       $dbAdapter = $container->get('DbAdapter');
-       return new ImoveisController ($dbAdapter);
+       $imoveisTable = $container->get('ImoveisTable');
+       return new ImoveisController ($imoveisTable);
     }
 }
