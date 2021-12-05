@@ -1,0 +1,23 @@
+<?php
+/**
+ * @var $this Laminas\View\Renderer\PhpRenderer
+ */
+?>
+<h1>Cadastro de Imoveis</h1>
+<p><a href="<?=$this->url('cadastros',[
+    'controller' => 'imoveis',
+    'action' => 'editar'
+])?>">Novo Imovel</a></p>
+<table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Metragem</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+
+</tbody>
+</table>
+<a href="<?=$this->url('cadastros')?>">Voltar</a>

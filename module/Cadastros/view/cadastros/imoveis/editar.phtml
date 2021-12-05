@@ -1,0 +1,30 @@
+<?php
+use Laminas\View\View;
+
+/**
+ * @var $this View
+ */
+?>
+<h1>Incluir Imoveis</h1>
+<br>
+<form method="post" action="<?=$this->url('cadastros',[
+'controller' => 'imoveis',
+'action' => 'gravar'    
+])?>">
+Nome: <input type="text" name="nome" autofocus="autofocus">
+<input type="hidden" name="matricula">
+<br>
+Tamanho em m²: <input type="text" name="nome" autofocus="autofocus">
+<input type="hidden" name="matricula">
+<br>
+Valor: <input type="text" name="nome" autofocus="autofocus">
+<input type="hidden" name="matricula">
+
+<br><br>
+<input type="submit" value="Gravar">
+</form>
+
+<br>
+<a href="<?=$this->url('cadastros',[
+'controller' => 'imoveis'    
+])?>">Voltar</a>

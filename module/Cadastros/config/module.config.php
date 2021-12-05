@@ -8,6 +8,7 @@ use Laminas\Router\Http\Literal;
 use Laminas\Router\Http\Segment;
 use Laminas\ServiceManager\Factory\InvokableFactory;
 use Cadastros\Controller\CorretorControllerFactory;
+use Cadastros\Controller\ImoveisControllerFactory;
 
 return [
     'router' => [
@@ -26,11 +27,13 @@ return [
     ],
     'controllers' => [
         'aliases' => [
-            'corretor' => Controller\CorretorController::class
+            'corretor' => Controller\CorretorController::class,
+            'imoveis' => Controller\ImoveisController::class
         ],
         'factories' => [
             Controller\IndexController::class => InvokableFactory::class,
             Controller\CorretorController::class => CorretorControllerFactory::class,
+            Controller\ImoveisController::class => ImoveisControllerFactory::class
         ],
     ],
     'view_manager' => [
@@ -41,6 +44,7 @@ return [
         'exception_template'       => 'error/index',
         'template_map' => [
             'cadastros/corretor/index'      => __DIR__ . '/../view/cadastros/corretor/index.phtml',
+            'cadastros/imoveis/index'      => __DIR__ . '/../view/cadastros/imoveis/index.phtml',
             'error/404'                     => __DIR__ . '/../view/error/404.phtml',
             'error/index'                   => __DIR__ . '/../view/error/index.phtml',
         ],
@@ -51,6 +55,8 @@ return [
     'service_manager' => [
         'factories' => [
             'CorretorTable' => Model\CorretorTableFactory::class
+            
+
         ]
     ]
 ];
