@@ -4,15 +4,17 @@
  */
 ?>
 <div class="jumbotron">
-    <h1 class="display-4">Acesso ao Sistema</h1>
+    <h1 class="display-5">Acesso ao Sistema</h1>
 
     <p>
         <form action="<?=$this->url('application',[
             'action' => 'login'
         ])?>" method="post">
         Usuário: <input type="text" name="usuario" autofocus="autofocus"/><br/>
+        <br>
         Senha: <input type="password" name="senha"/><br/>
-        <input type="submit" value="entrar"/>
+        <br>
+        <input type="submit" value="Acessar"/>
         </form>
     </p>
 </div>

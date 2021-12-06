@@ -21,6 +21,11 @@ return [
                         'controller' => Controller\IndexController::class,
                         'action'     => 'index',
                     ],
+                    'route'    => '/cadastros[/:controller[/:action[/:registro]]]',
+                    'defaults' => [
+                        'controller' => Controller\IndexController::class,
+                        'action'     => 'index',
+                    ]
                 ],
             ],
         ],

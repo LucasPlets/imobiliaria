@@ -14,15 +14,15 @@ class Imoveis
 
     public function __construct(array $data)
     {
-        $this->registro = ($data['registro'] ?? 0);
-        $this->tipo = ($data['tipo'] ?? '');
-        $this->tamanho = ($data['tamanho'] ?? 0);
-        $this->valor = ($data['valor'] ?? 0);
-       // $this->exchangeArray($data);
+       $this->exchangeArray($data);
     }
 
     public function exchangeArray(array $data)
     {
+        $this->registro = (int) ($data['registro'] ?? 0);
+        $this->tipo = ($data['tipo'] ?? '');
+        $this->tamanho = ($data['tamanho'] ?? 0);
+        $this->valor = ($data['valor'] ?? 0);
 
     }
 

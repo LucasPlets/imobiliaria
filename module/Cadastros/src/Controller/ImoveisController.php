@@ -28,7 +28,12 @@ class ImoveisController extends AbstractActionController
 
     public function editarAction()
     {
-        return new ViewModel();
+        $registro = (int) $this->params('registro');
+        $imoveis = $this->imoveisTable->buscar($registro);
+        
+        return new ViewModel([
+                'imoveis' => $imoveis
+            ]);
     }
     
     public function  gravarAction()
@@ -43,6 +48,15 @@ class ImoveisController extends AbstractActionController
         ]);
     }
     
+    public function apagarAction()
+    {
+        $registro = (int) $this->params('registro');
+        $this->imoveisTable->apagar($registro);
+        return $this->redirect()->toRoute('cadastros',[
+            'controller' => 'imoveis',
+            'action'     => 'index'
+        ]);
+    }
 
 
 }

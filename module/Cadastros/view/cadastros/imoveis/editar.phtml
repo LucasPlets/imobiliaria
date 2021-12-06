@@ -11,11 +11,12 @@ use Laminas\View\View;
 'controller' => 'imoveis',
 'action' => 'gravar'    
 ])?>">
-Tipo: <input type="text" name="tipo" autofocus="autofocus">
+Tipo: <input type="text" name="tipo" autofocus="autofocus" value="<?=$this->imoveis->tipo?>">
+<input type="hidden" name="registro" value="<?=$this->imoveis->registro?>">
 <br>
-Tamanho em m²: <input type="number" name="tamanho" autofocus="autofocus">
+Tamanho em m²: <input type="number" name="tamanho" autofocus="autofocus" value="<?=$this->imoveis->tamanho?>">
 <br>
-Valor: <input type="number" name="valor" autofocus="autofocus">
+Valor: <input type="number" name="valor" autofocus="autofocus" value="<?=$this->imoveis->valor?>">
 
 <br><br>
 <input type="submit" value="Gravar">

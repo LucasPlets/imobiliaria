@@ -11,7 +11,9 @@ class ImoveisTableFactory implements FactoryInterface
     public function __invoke(ContainerInterface $container, $requestedName, ?array $options = null)
     {
         $adapter = $container->get('DbAdapter');
-        $tableGateway = new TableGateway('imoveis', $adapter);
+        $resultSetPrototype = new ResultSet();
+        $resultSetPrototype->setArrayObjectPrototype(new Imoveis([]));
+        $tableGateway = new TableGateway('imoveis', $adapter,null,$resultSetPrototype);
         $imoveisTable = new ImoveisTable($tableGateway);
         return $imoveisTable;
     }
