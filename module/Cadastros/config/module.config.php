@@ -16,16 +16,21 @@ return [
             'cadastros' => [
                 'type'    => Segment::class,
                 'options' => [
-                    'route'    => '/cadastros[/:controller[/:action[/:matricula]]]',
+                    'route'    => '/cadastro[/:controller[/:action[/:matricula]]]',
                     'defaults' => [
                         'controller' => Controller\IndexController::class,
                         'action'     => 'index',
                     ],
+                ],
+            ],
+            'cadastrosImoveis' => [
+                'type'    => Segment::class,
+                'options' => [
                     'route'    => '/cadastros[/:controller[/:action[/:registro]]]',
                     'defaults' => [
                         'controller' => Controller\IndexController::class,
                         'action'     => 'index',
-                    ]
+                    ],
                 ],
             ],
         ],

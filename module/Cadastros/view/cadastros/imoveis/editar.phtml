@@ -7,7 +7,7 @@ use Laminas\View\View;
 ?>
 <h1>Incluir Imoveis</h1>
 <br>
-<form method="post" action="<?=$this->url('cadastros',[
+<form method="post" action="<?=$this->url('cadastrosImoveis',[
 'controller' => 'imoveis',
 'action' => 'gravar'    
 ])?>">
@@ -23,6 +23,6 @@ Valor: <input type="number" name="valor" autofocus="autofocus" value="<?=$this->
 </form>
 
 <br>
-<a href="<?=$this->url('cadastros',[
+<a href="<?=$this->url('cadastrosImoveis',[
 'controller' => 'imoveis'    
 ])?>">Voltar</a>

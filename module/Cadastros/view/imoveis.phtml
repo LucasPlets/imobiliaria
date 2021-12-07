@@ -9,7 +9,7 @@ $num = $this->valor;
 
 ?>
 <tr>
-<td><a href="<?= $this->url('cadastros',[
+<td><a href="<?= $this->url('cadastrosImoveis',[
     'controller' => 'imoveis',
     'action' => 'editar',
     'registro' => $this->registro])
@@ -17,7 +17,7 @@ $num = $this->valor;
 <td><?=$this->tipo?></td>
 <td><?=$this->tamanho?> m²</td>
 <td>R$ <?=$formatarValor?></td>
-<td><a href="<?= $this->url('cadastros',[
+<td><a href="<?= $this->url('cadastrosImoveis',[
     'controller' => 'imoveis',
     'action' => 'apagar',
     'registro' => $this->registro])
